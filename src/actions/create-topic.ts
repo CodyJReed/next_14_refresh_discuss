@@ -7,6 +7,7 @@ import { z } from "zod";
 import { auth } from "@/auth";
 import { db } from "@/db";
 import paths from "@/paths";
+import { resolve } from "path";
 
 const createTopicScheme = z.object({
   name: z
@@ -30,6 +31,7 @@ export async function createTopic(
   formState: CreateTopicFormState,
   formData: FormData
 ): Promise<CreateTopicFormState> {
+  await new Promise((resolve) => setTimeout(resolve, 250));
   // revalidate the home page
   const result = createTopicScheme.safeParse({
     name: formData.get("name"),
