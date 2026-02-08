@@ -7,7 +7,6 @@ import { z } from "zod";
 import { auth } from "@/auth";
 import { db } from "@/db";
 import paths from "@/paths";
-import { resolve } from "path";
 
 const createTopicScheme = z.object({
   name: z

@@ -11,7 +11,7 @@ import {
 
 import * as actions from "@/actions";
 import { useActionState, startTransition } from "react";
-import FormButton from "./form-button";
+import FormButton from "../common/form-button";
 
 export default function TopicCreateForm() {
   const [formState, action, isPending] = useActionState(actions.createTopic, {
