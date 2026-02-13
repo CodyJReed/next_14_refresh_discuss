@@ -15,7 +15,7 @@ export default async function Page({ params }: PageProps) {
       </div>
 
       <div>
-        <PostCreateForm />
+        <PostCreateForm slug={slug} />
       </div>
     </div>
   );
