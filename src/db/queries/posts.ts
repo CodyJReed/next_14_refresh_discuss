@@ -36,7 +36,7 @@ export function fetchTopPosts(): Promise<PostWithData[]> {
   });
 }
 
-export function fetchPostByTerm(term: string): Promise<PostWithData0> {
+export function fetchPostByTerm(term: string): Promise<PostWithData[]> {
   return db.post.findMany({
     include: {
       topic: { select: { slug: true } },
