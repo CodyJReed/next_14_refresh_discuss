@@ -19,8 +19,8 @@ export default async function PostShowPage({ params }: PostShowPageProps) {
       <Link className="underline decoration-solid" href={paths.topicShow(slug)}>
         {"< "}Back to {slug}
       </Link>
-      {/* <PostShow /> */}
-      {/* <CommentCreateForm postId={id} startOpen /> */}
+      <PostShow id={id} />
+      <CommentCreateForm postId={id} startOpen />
       {/* <CommentList comments={comments} /> */}
     </div>
   );
